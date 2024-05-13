@@ -32,6 +32,7 @@
         }
         section {
             padding: 20px;
+            display: none;
         }
         footer {
             background-color: #333;
@@ -46,19 +47,20 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Deathrunner.minefort.com's Website!</h1>
+        <h1 id="welcome-title">Welcome to Deathrunner.minefort.com's Website!</h1>
         <p>Connect using the IP: <code>Deathrunner.minefort.com</code></p>
         <p>For cracked players use the IP: <code>play.minefort.com</code></p>
-        <p>And then register/login once your in the lobby do the command: "/server Deathrunner"</p>
-        <p>If the command returns unknown server, start the server via the command: "/start Deathrunner" and then wait 25 - 30 seconds and then try joining the server again.</p>
+        <p>And then register/login once you're in the lobby, do the command: "/server Deathrunner"</p>
+        <p>If the command returns an unknown server, start the server via the command: "/start Deathrunner" and then wait 25 - 30 seconds and then try joining the server again.</p>
     </header>
     <nav>
-        <a href="#about">About</a>
-        <a href="#rules">Rules</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" onclick="showSection('about')">About</a>
+        <a href="#rules" onclick="showSection('rules')">Rules</a>
+        <a href="#contact" onclick="showSection('contact')">Contact</a>
     </nav>
     <section id="about">
         <h2>About</h2>
+        <p>This is the official website of Deathrunner.minefort.com. Here you can find information about our server and community.</p>
     </section>
     <section id="rules">
         <h2>Rules</h2>
@@ -66,68 +68,40 @@
             <li>Rule 1: Be respectful to other players.</li>
             <li>Rule 2: No cheating or exploiting glitches.</li>
             <li>Rule 3: Have fun!</li>
+            <li>Rule 4: No griefing or stealing.</li>
+            <li>Rule 5: Do not spam chat.</li>
+            <li>Rule 6: Follow staff instructions.</li>
         </ul>
     </section>
     <section id="contact">
         <h2>Contact</h2>
         <p>If you have any questions or concerns, feel free to contact us at:</p>
         <p>Email: deathrunner.minefort@gmail.com</p>
-        <h1> </h1>
-        <h1> </h1>
-        <style>
-         body {
-          background-color: #000;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          overflow: hidden;
-         }
-
-         #parrot {
-          width: 200px;
-          height: 200px;
-          position: absolute;
-         }
-       </style>
-       </head>
-       <body>
-       <div id="parrot">
-         <img src="https://cultofthepartyparrot.com/parrots/hd/parrot.gif" alt="Parrot">
-       </div>
-
-       <script>
-       setInterval(() => {
-         const parrot = document.getElementById('parrot');
-         const clonedParrot = parrot.cloneNode(true);
-         parrot.parentNode.replaceChild(clonedParrot, parrot);
-        }, 265);
-        </script>
-        <h1> </h1>
-        <h1> </h1>
-        <h1> </h1>
-        <h1> </h1>
-        <h1> </h1>
-        <h1> </h1>
-        <h1>sceret meow :D</h1>
     </section>
     <footer>
         <p>© 2024 Deathrunner.minefort.com</p>
     </footer>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Update welcome text based on section
+            const welcomeTitle = document.getElementById('welcome-title');
+            if (sectionId === 'about') {
+                welcomeTitle.textContent = 'About - Deathrunner.minefort.com';
+            } else if (sectionId === 'rules') {
+                welcomeTitle.textContent = 'Rules of - Deathrunner.minefort.com';
+            } else if (sectionId === 'contact') {
+                welcomeTitle.textContent = 'Contact - Deathrunner.minefort.com';
+            }
+        }
+    </script>
 </body>
 </html>
