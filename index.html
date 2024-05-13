@@ -80,6 +80,17 @@
     </section>
     <footer>
         <p>© 2024 Deathrunner.minefort.com</p>
+        <button id="easter-egg-button" onclick="toggleDancingCat()">secret</button>
+<div id="dancing-cat">
+    <img src="https://cultofthepartyparrot.com/parrots/hd/portalblueparrot.gif" alt="Dancing Cat">
+</div>
+
+<script>
+    function toggleDancingCat() {
+        const dancingCat = document.getElementById('dancing-cat');
+        dancingCat.style.display = (dancingCat.style.display === 'none') ? 'block' : 'none';
+    }
+</script>
     </footer>
 
     <script>
