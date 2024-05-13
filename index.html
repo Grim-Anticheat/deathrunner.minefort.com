@@ -74,6 +74,44 @@
         <p>Email: deathrunner.minefort@gmail.com</p>
         <h1> </h1>
         <h1> </h1>
+        <style>
+         body {
+          background-color: #000;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          overflow: hidden;
+         }
+
+         #parrot {
+          width: 200px;
+          height: 200px;
+          position: absolute;
+         }
+       </style>
+       </head>
+       <body>
+       <div id="parrot">
+         <img src="https://cultofthepartyparrot.com/parrots/hd/parrot.gif" alt="Parrot">
+       </div>
+
+       <script>
+       setInterval(() => {
+         const parrot = document.getElementById('parrot');
+         const clonedParrot = parrot.cloneNode(true);
+         parrot.parentNode.replaceChild(clonedParrot, parrot);
+        }, 265);
+        </script>
+        <h1> </h1>
+        <h1> </h1>
+        <h1> </h1>
+        <h1> </h1>
+        <h1> </h1>
+        <h1> </h1>
+        <h1>sceret meow :D</h1>
     </section>
     <footer>
         <p>© 2024 Deathrunner.minefort.com</p>
